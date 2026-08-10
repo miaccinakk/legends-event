@@ -26,11 +26,11 @@ export function Hero() {
             {/* Kicker: private session + InvestHack identity + online tag */}
             <span className="block text-xs font-medium uppercase tracking-[0.2em] text-primary">Private session</span>
 
-            <div className="mt-3 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <div className="mt-3">
               <p className="text-[1.75rem] font-extrabold tracking-tight sm:text-4xl">
                 <span className="gold-text">InvestHack</span> #02
               </p>
-              <span className="inline-flex items-center gap-1.5 text-sm font-medium uppercase tracking-[0.16em] text-muted-foreground">
+              <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium uppercase tracking-[0.16em] text-muted-foreground">
                 <Video className="h-4 w-4 text-primary" />
                 Online · closed room
               </span>
@@ -47,10 +47,8 @@ export function Hero() {
             {/* Event date + city times */}
             <div className="mt-9 flex flex-col gap-4">
               <div className="inline-flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-primary/30 bg-card/70 backdrop-blur-sm">
-                  <CalendarDays className="h-5 w-5 text-primary" />
-                </span>
-                <span className="text-2xl font-bold tracking-tight">Tue, 25 August</span>
+                <CalendarDays className="h-8 w-8 shrink-0 text-primary sm:h-9 sm:w-9" />
+                <span className="text-3xl font-bold tracking-tight sm:text-4xl">Tuesday, 25 August</span>
               </div>
 
               <div className="flex flex-wrap items-center divide-x divide-border/70">
@@ -77,8 +75,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right — speaker portrait, enlarged and shifted left for prominence */}
-          <div className="relative min-h-[420px] lg:min-h-[560px]">
+          {/* Right — speaker portrait. On mobile it sits behind the text block, faded so copy stays readable. On desktop it becomes a prominent side portrait. */}
+          <div className="absolute inset-0 -z-[1] opacity-40 lg:relative lg:inset-auto lg:z-0 lg:min-h-[560px] lg:opacity-100">
             <img
               src="/images/julius-bachmann.png"
               alt="Julius Bachmann — VC, CFO, Founder and musician"
