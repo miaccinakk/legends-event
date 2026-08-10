@@ -26,18 +26,18 @@ export function Hero() {
             {/* Kicker: private session + InvestHack identity + online tag */}
             <span className="block text-xs font-medium uppercase tracking-[0.2em] text-primary">Private session</span>
 
-            <div className="mt-3">
-              <p className="text-[1.75rem] font-extrabold tracking-tight sm:text-4xl">
+            <div className="mt-2">
+              <p className="text-2xl font-extrabold tracking-tight sm:text-4xl">
                 <span className="gold-text">InvestHack</span> #02
               </p>
-              <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium uppercase tracking-[0.16em] text-muted-foreground">
+              <span className="mt-1.5 inline-flex items-center gap-1.5 text-sm font-medium uppercase tracking-[0.16em] text-muted-foreground">
                 <Video className="h-4 w-4 text-primary" />
                 Online · closed room
               </span>
             </div>
 
             {/* Event title — the headline */}
-            <h1 className="mt-6 text-balance text-[clamp(2.5rem,5.5vw,4.5rem)] font-bold leading-[0.98] tracking-tight">
+            <h1 className="mt-4 text-balance text-[clamp(2.9rem,5.5vw,4.5rem)] font-bold leading-[0.98] tracking-tight sm:mt-6">
               Ownership, Culture <span className="text-muted-foreground">&amp;</span> Care
             </h1>
             <p className="mt-4 max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:text-xl">
@@ -45,16 +45,16 @@ export function Hero() {
             </p>
 
             {/* Event date + city times */}
-            <div className="mt-9 flex flex-col gap-4">
+            <div className="mt-7 flex flex-col gap-4 sm:mt-9">
               <div className="inline-flex items-center gap-3">
-                <CalendarDays className="h-8 w-8 shrink-0 text-primary sm:h-9 sm:w-9" />
-                <span className="text-3xl font-bold tracking-tight sm:text-4xl">Tuesday, 25 August</span>
+                <CalendarDays className="h-7 w-7 shrink-0 text-primary sm:h-9 sm:w-9" />
+                <span className="text-2xl font-bold tracking-tight sm:text-4xl">Tuesday, 25 August</span>
               </div>
 
               <div className="flex flex-wrap items-center divide-x divide-border/70">
                 {timeChips.map((t) => (
                   <div key={t.city} className="flex flex-col px-4 first:pl-0">
-                    <span className="text-lg font-semibold leading-none">{t.time}</span>
+                    <span className="text-base font-semibold leading-none sm:text-lg">{t.time}</span>
                     <span className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">{t.city}</span>
                   </div>
                 ))}
@@ -76,7 +76,7 @@ export function Hero() {
           </div>
 
           {/* Right — speaker portrait. On mobile it sits behind the text block, faded and masked so copy stays readable. On desktop it becomes a prominent side portrait. */}
-          <div className="pointer-events-none absolute inset-0 z-0 opacity-[0.45] [mask-image:linear-gradient(to_bottom,transparent,#000_20%,#000_75%,transparent)] lg:pointer-events-auto lg:relative lg:inset-auto lg:opacity-100 lg:min-h-[560px] lg:[mask-image:none]">
+          <div className="pointer-events-none absolute -inset-x-6 -inset-y-32 z-0 opacity-[0.45] [mask-image:linear-gradient(to_bottom,transparent,#000_20%,#000_75%,transparent)] lg:pointer-events-auto lg:relative lg:inset-auto lg:opacity-100 lg:min-h-[560px] lg:[mask-image:none]">
             <img
               src="/images/julius-bachmann.png"
               alt="Julius Bachmann — VC, CFO, Founder and musician"
