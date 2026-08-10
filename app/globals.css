@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-sans: var(--font-outfit), -apple-system, system-ui, sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -21,30 +20,33 @@
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 6px);
+  --radius-2xl: calc(var(--radius) + 12px);
 }
 
 :root {
-  --radius: 0.75rem;
+  --radius: 1rem;
 
-  --background: oklch(0.985 0.008 130);
-  --foreground: oklch(0.24 0.02 150);
+  /* Legends brand — black + cream + gold */
+  --background: #000000;
+  --foreground: #f5f2ed;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.24 0.02 150);
+  --card: #0b0a09;
+  --card-foreground: #f5f2ed;
 
-  --muted: oklch(0.955 0.012 130);
-  --muted-foreground: oklch(0.5 0.02 150);
+  --muted: #141210;
+  --muted-foreground: #9b968c;
 
-  --border: oklch(0.91 0.012 130);
-  --input: oklch(0.91 0.012 130);
-  --ring: oklch(0.52 0.09 150);
+  --border: rgba(197, 153, 58, 0.14);
+  --input: rgba(245, 242, 237, 0.12);
+  --ring: #c5993a;
 
-  --primary: oklch(0.52 0.09 150);
-  --primary-foreground: oklch(0.99 0.01 130);
+  /* Gold */
+  --primary: #c5993a;
+  --primary-foreground: #0b0a09;
 
-  --accent: oklch(0.82 0.13 92);
-  --accent-foreground: oklch(0.28 0.04 100);
+  --accent: #d9b25e;
+  --accent-foreground: #0b0a09;
 }
 
 * {
@@ -53,12 +55,29 @@
 
 html {
   background-color: var(--background);
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: rgba(197, 153, 58, 0.28);
+  color: #f5f2ed;
+}
+
+.gold-text {
+  color: var(--primary);
+}
+
+/* subtle gold gradient for accent fills */
+.gold-fill {
+  background-image: linear-gradient(135deg, #d9b25e 0%, #c5993a 55%, #a97e28 100%);
 }
