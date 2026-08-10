@@ -1,4 +1,11 @@
-import { RegistrationForm } from "./registration-form"
+import { ArrowRight, ShieldCheck, Clock3, Users } from "lucide-react"
+import { ApplyButton } from "./apply-button"
+
+const assurances = [
+  { icon: ShieldCheck, label: "Reviewed personally", desc: "Every request is read by the team — not a queue." },
+  { icon: Clock3, label: "Reply within 72h", desc: "You'll hear back before the list locks." },
+  { icon: Users, label: "Capped & intimate", desc: "A small closed room, kept intentionally small." },
+]
 
 export function ApplySection() {
   return (
@@ -14,10 +21,28 @@ export function ApplySection() {
             intentionally small. A submission isn&apos;t a seat: every application is reviewed personally within 72
             hours.
           </p>
+
+          <div className="mt-9 flex justify-center">
+            <ApplyButton className="group inline-flex items-center gap-2 rounded-full gold-fill px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+              Apply to Join
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </ApplyButton>
+          </div>
         </div>
 
-        <div className="mt-12">
-          <RegistrationForm />
+        <div className="mx-auto mt-14 grid max-w-4xl gap-5 sm:grid-cols-3">
+          {assurances.map((a) => {
+            const Icon = a.icon
+            return (
+              <div key={a.label} className="rounded-2xl border border-border bg-card p-6 text-center">
+                <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl border border-primary/30 text-primary">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <p className="mt-4 text-sm font-semibold">{a.label}</p>
+                <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{a.desc}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

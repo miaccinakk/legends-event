@@ -24,7 +24,7 @@ export function Speaker() {
           <div className="relative">
             <div className="overflow-hidden rounded-2xl border border-border">
               <img
-                src="/images/julius-bachmann.png"
+                src="/images/julius-bachmann-poster.png"
                 alt="Julius Bachmann — VC, CFO, Founder and musician"
                 className="w-full object-cover"
               />

@@ -5,6 +5,7 @@ import { Speaker } from "@/components/speaker"
 import { ApplySection } from "@/components/apply-section"
 import { AboutLegends } from "@/components/about-legends"
 import { SiteFooter } from "@/components/site-footer"
+import { ApplyModal } from "@/components/apply-modal"
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
         <AboutLegends />
       </main>
       <SiteFooter />
+      <ApplyModal />
     </div>
   )
 }

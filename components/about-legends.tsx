@@ -1,4 +1,5 @@
 import { Landmark, Network, Sparkles, Music2, Compass } from "lucide-react"
+import { ApplyButton } from "./apply-button"
 
 const pillars = [
   { icon: Landmark, label: "Capital" },
@@ -69,12 +70,9 @@ export function AboutLegends() {
               Seats are capped and reviewed personally. The final list locks 24 hours before.
             </p>
           </div>
-          <a
-            href="#request"
-            className="shrink-0 rounded-full gold-fill px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-          >
+          <ApplyButton className="shrink-0 rounded-full gold-fill px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
             Request Access
-          </a>
+          </ApplyButton>
         </div>
       </div>
     </section>
