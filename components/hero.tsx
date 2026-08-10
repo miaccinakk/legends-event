@@ -20,17 +20,15 @@ export function Hero() {
       </div>
 
       <div className="mx-auto max-w-6xl px-6 pb-24 pt-32 lg:pb-28 lg:pt-40">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           {/* Left — event narrative */}
           <div className="relative z-10">
             {/* Kicker: private session + InvestHack identity + online tag */}
-            <span className="inline-flex rounded-full border border-primary/40 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-primary">
-              Private session
-            </span>
+            <span className="block text-xs font-medium uppercase tracking-[0.2em] text-primary">Private session</span>
 
-            <div className="mt-4 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-              <p className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                <span className="gold-text">InvestHack</span> #03
+            <div className="mt-3 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+              <p className="text-[1.75rem] font-extrabold tracking-tight sm:text-4xl">
+                <span className="gold-text">InvestHack</span> #02
               </p>
               <span className="inline-flex items-center gap-1.5 text-sm font-medium uppercase tracking-[0.16em] text-muted-foreground">
                 <Video className="h-4 w-4 text-primary" />
