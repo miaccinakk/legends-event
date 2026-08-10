@@ -7,9 +7,6 @@ export function SiteNav() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <LegendsLogo className="h-8" />
         <div className="flex items-center gap-6">
-          <span className="hidden text-xs font-light uppercase tracking-[0.25em] text-muted-foreground md:inline">
-            Access by invitation only
-          </span>
           <ApplyButton className="rounded-full gold-fill px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">
             Apply to Join
           </ApplyButton>
