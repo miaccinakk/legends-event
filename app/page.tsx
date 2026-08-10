@@ -2,6 +2,7 @@ import { SiteNav } from "@/components/site-nav"
 import { Hero } from "@/components/hero"
 import { SessionValue } from "@/components/session-value"
 import { Speaker } from "@/components/speaker"
+import { ApplySection } from "@/components/apply-section"
 import { AboutLegends } from "@/components/about-legends"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -13,6 +14,7 @@ export default function HomePage() {
         <Hero />
         <SessionValue />
         <Speaker />
+        <ApplySection />
         <AboutLegends />
       </main>
       <SiteFooter />

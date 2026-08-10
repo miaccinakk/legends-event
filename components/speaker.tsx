@@ -15,7 +15,7 @@ const stats = [
 
 export function Speaker() {
   return (
-    <section className="border-t border-border py-24">
+    <section id="speaker" className="border-t border-border py-24">
       <div className="mx-auto max-w-6xl px-6">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">The speaker</p>
 
