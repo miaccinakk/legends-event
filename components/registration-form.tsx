@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Loader2 } from "lucide-react"
+import { Check, Loader2, ChevronDown } from "lucide-react"
 
 const roles = [
   "Founder / Co-founder",
@@ -62,7 +62,7 @@ export function RegistrationForm() {
 
   if (status === "done") {
     return (
-      <div className="mx-auto flex max-w-lg flex-col items-center gap-4 rounded-2xl border border-border bg-card p-10 text-center">
+      <div className="flex flex-col items-center gap-4 px-2 py-6 text-center">
         <span className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary text-primary">
           <Check className="h-7 w-7" strokeWidth={2.2} />
         </span>
@@ -76,10 +76,7 @@ export function RegistrationForm() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-6 shadow-[0_0_80px_-30px_rgba(197,153,58,0.4)] sm:p-9"
-    >
+    <form onSubmit={handleSubmit}>
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Full name" required className="sm:col-span-2">
           <input required value={form.fullName} onChange={update("fullName")} placeholder="Your full name" className={inputClass} />
@@ -190,7 +187,7 @@ export function RegistrationForm() {
 }
 
 const inputClass =
-  "w-full rounded-xl border border-[var(--input)] bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
+  "gold-input w-full rounded-xl px-4 py-3 text-sm text-foreground outline-none"
 
 function Select({
   value,
@@ -203,10 +200,10 @@ function Select({
 }) {
   return (
     <div className="relative">
-      <select required value={value} onChange={onChange} className={`${inputClass} appearance-none pr-9`}>
+      <select required value={value} onChange={onChange} className={`${inputClass} appearance-none pr-10`}>
         {children}
       </select>
-      <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">▾</span>
+      <ChevronDown className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-primary" strokeWidth={2.4} />
     </div>
   )
 }

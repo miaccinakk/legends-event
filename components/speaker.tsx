@@ -20,15 +20,13 @@ export function Speaker() {
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">The speaker</p>
 
         <div className="mt-8 grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-          {/* Portrait poster */}
+          {/* Portrait poster (soft black halo baked into the image) */}
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl border border-border">
-              <img
-                src="/images/julius-bachmann.png"
-                alt="Julius Bachmann — VC, CFO, Founder and musician"
-                className="w-full object-cover"
-              />
-            </div>
+            <img
+              src="/images/julius-bachmann-poster.png"
+              alt="Julius Bachmann — VC, CFO, Founder and musician"
+              className="w-full object-cover"
+            />
           </div>
 
           {/* Bio */}

@@ -1,4 +1,5 @@
 import { LegendsLogo } from "./legends-logo"
+import { ApplyButton } from "./apply-button"
 
 export function SiteNav() {
   return (
@@ -9,12 +10,9 @@ export function SiteNav() {
           <span className="hidden text-xs font-light uppercase tracking-[0.25em] text-muted-foreground md:inline">
             Access by invitation only
           </span>
-          <a
-            href="#apply"
-            className="rounded-full gold-fill px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
+          <ApplyButton className="rounded-full gold-fill px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">
             Apply to Join
-          </a>
+          </ApplyButton>
         </div>
       </nav>
     </header>
