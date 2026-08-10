@@ -1,10 +1,10 @@
-import { ArrowRight, ShieldCheck, Clock3, Users } from "lucide-react"
+import { ArrowRight, ClipboardList, Mail, Users } from "lucide-react"
 import { ApplyButton } from "./apply-button"
 
 const assurances = [
-  { icon: ShieldCheck, label: "Reviewed personally", desc: "Every request is read by the team — not a queue." },
-  { icon: Clock3, label: "Reply within 72h", desc: "You'll hear back before the list locks." },
-  { icon: Users, label: "Capped & intimate", desc: "A small closed room, kept intentionally small." },
+  { icon: ClipboardList, label: "Register", desc: "Fill in a short form to request your spot." },
+  { icon: Mail, label: "Get your invite", desc: "We'll email you the joining link and details." },
+  { icon: Users, label: "Join the room", desc: "A small closed online session, kept intimate." },
 ]
 
 export function ApplySection() {
@@ -12,14 +12,13 @@ export function ApplySection() {
     <section id="apply" className="relative overflow-hidden border-t border-border py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Apply to join</p>
+          <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Register</p>
           <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-            Request your seat at the session
+            Reserve your spot at the session
           </h2>
           <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
-            Tell us about yourself — we&apos;ll review and be in touch. Seats are capped and the room is kept
-            intentionally small. A submission isn&apos;t a seat: every application is reviewed personally within 72
-            hours.
+            Register below and we&apos;ll send your invite with the joining link. The session is online and the room
+            is kept intentionally small, so we recommend signing up early.
           </p>
 
           <div className="mt-9 flex justify-center">

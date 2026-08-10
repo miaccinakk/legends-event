@@ -79,15 +79,13 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right — branded speaker poster (name & credentials baked into the image) */}
+          {/* Right — speaker portrait (soft black halo baked into the image) */}
           <div className="relative">
-            <div className="relative overflow-hidden rounded-3xl border border-primary/25 shadow-[0_0_120px_-40px_rgba(197,153,58,0.6)]">
-              <img
-                src="/images/julius-bachmann-poster.png"
-                alt="Julius Bachmann — VC, CFO, Founder and musician"
-                className="aspect-square w-full object-cover"
-              />
-            </div>
+            <img
+              src="/images/julius-bachmann.png"
+              alt="Julius Bachmann — VC, CFO, Founder and musician"
+              className="aspect-square w-full object-cover"
+            />
           </div>
         </div>
       </div>
