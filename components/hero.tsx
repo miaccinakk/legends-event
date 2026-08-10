@@ -22,47 +22,47 @@ export function Hero() {
       <div className="mx-auto max-w-6xl px-6 pb-24 pt-32 lg:pb-28 lg:pt-40">
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           {/* Left — event narrative */}
-          <div>
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-              <span className="rounded-full border border-primary/40 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-primary">
-                Private online session
-              </span>
-              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+          <div className="relative z-10">
+            {/* Kicker: private session + InvestHack identity + online tag */}
+            <span className="inline-flex rounded-full border border-primary/40 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-primary">
+              Private session
+            </span>
+
+            <div className="mt-4 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+              <p className="text-4xl font-extrabold tracking-tight sm:text-5xl">
                 <span className="gold-text">InvestHack</span> #03
+              </p>
+              <span className="inline-flex items-center gap-1.5 text-sm font-medium uppercase tracking-[0.16em] text-muted-foreground">
+                <Video className="h-4 w-4 text-primary" />
+                Online · closed room
               </span>
             </div>
 
             {/* Event title — the headline */}
-            <h1 className="mt-7 text-balance text-[clamp(2.5rem,5.5vw,4.5rem)] font-bold leading-[0.98] tracking-tight">
+            <h1 className="mt-6 text-balance text-[clamp(2.5rem,5.5vw,4.5rem)] font-bold leading-[0.98] tracking-tight">
               Ownership, Culture <span className="text-muted-foreground">&amp;</span> Care
             </h1>
             <p className="mt-4 max-w-xl text-pretty text-lg font-light leading-snug text-muted-foreground sm:text-xl">
               The capital they create — a closed session where boardroom strategy and personal leadership meet.
             </p>
 
-            {/* Event meta */}
-            <div className="mt-9 flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-2 rounded-xl border border-border bg-card/80 px-4 py-2.5 text-sm backdrop-blur-sm">
-                <CalendarDays className="h-4 w-4 text-primary" />
-                <span className="font-semibold">Tue, 25 August</span>
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-xl border border-border bg-card/80 px-4 py-2.5 text-sm backdrop-blur-sm">
-                <Video className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">Online · closed room</span>
-              </span>
-            </div>
-
-            {/* City times */}
-            <div className="mt-3 flex flex-wrap items-center gap-2">
-              {timeChips.map((t) => (
-                <span
-                  key={t.city}
-                  className="inline-flex items-center gap-2 rounded-xl border border-border/60 bg-card/50 px-3.5 py-2 text-sm backdrop-blur-sm"
-                >
-                  <span className="font-semibold">{t.time}</span>
-                  <span className="text-muted-foreground">{t.city}</span>
+            {/* Event date + city times */}
+            <div className="mt-9 flex flex-col gap-4">
+              <div className="inline-flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-primary/30 bg-card/70 backdrop-blur-sm">
+                  <CalendarDays className="h-5 w-5 text-primary" />
                 </span>
-              ))}
+                <span className="text-2xl font-bold tracking-tight">Tue, 25 August</span>
+              </div>
+
+              <div className="flex flex-wrap items-center divide-x divide-border/70">
+                {timeChips.map((t) => (
+                  <div key={t.city} className="flex flex-col px-4 first:pl-0">
+                    <span className="text-lg font-semibold leading-none">{t.time}</span>
+                    <span className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">{t.city}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -79,12 +79,12 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right — speaker portrait (soft black halo baked into the image) */}
-          <div className="relative">
+          {/* Right — speaker portrait, enlarged and shifted left for prominence */}
+          <div className="relative min-h-[420px] lg:min-h-[560px]">
             <img
               src="/images/julius-bachmann.png"
               alt="Julius Bachmann — VC, CFO, Founder and musician"
-              className="aspect-square w-full object-cover"
+              className="pointer-events-none absolute left-1/2 top-1/2 w-[128%] max-w-none -translate-x-[58%] -translate-y-1/2 object-contain lg:left-0 lg:-translate-x-[22%]"
             />
           </div>
         </div>
