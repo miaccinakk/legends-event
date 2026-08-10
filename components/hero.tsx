@@ -75,12 +75,12 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right — speaker portrait. On mobile it sits behind the text block, faded so copy stays readable. On desktop it becomes a prominent side portrait. */}
-          <div className="absolute inset-0 -z-[1] opacity-40 lg:relative lg:inset-auto lg:z-0 lg:min-h-[560px] lg:opacity-100">
+          {/* Right — speaker portrait. On mobile it sits behind the text block, faded and masked so copy stays readable. On desktop it becomes a prominent side portrait. */}
+          <div className="pointer-events-none absolute inset-0 z-0 opacity-[0.45] [mask-image:linear-gradient(to_bottom,transparent,#000_20%,#000_75%,transparent)] lg:pointer-events-auto lg:relative lg:inset-auto lg:opacity-100 lg:min-h-[560px] lg:[mask-image:none]">
             <img
               src="/images/julius-bachmann.png"
               alt="Julius Bachmann — VC, CFO, Founder and musician"
-              className="pointer-events-none absolute left-1/2 top-1/2 w-[128%] max-w-none -translate-x-[58%] -translate-y-1/2 object-contain lg:left-0 lg:-translate-x-[22%]"
+              className="absolute left-1/2 top-1/2 h-[115%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain lg:h-auto lg:w-[128%] lg:left-0 lg:-translate-x-[22%]"
             />
           </div>
         </div>

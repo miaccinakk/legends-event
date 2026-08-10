@@ -62,15 +62,15 @@ export function AboutLegends() {
           ))}
         </div>
 
-        {/* Final CTA */}
-        <div className="mt-16 flex flex-col items-start gap-6 rounded-2xl border border-primary/30 bg-card p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10">
-          <div>
-            <h3 className="text-balance text-2xl font-semibold tracking-tight">Sessions like this are the way in.</h3>
-            <p className="mt-2 text-pretty text-muted-foreground">
-              Seats are capped and reviewed personally. The final list locks 24 hours before.
-            </p>
-          </div>
-          <ApplyButton className="shrink-0 rounded-full gold-fill px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+        {/* Final CTA — centered band, no card border, distinct from the stats block above */}
+        <div className="mt-20 flex flex-col items-center gap-7 border-t border-border pt-16 text-center">
+          <h3 className="max-w-2xl text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+            Sessions like this are <span className="gold-text">the way in.</span>
+          </h3>
+          <p className="max-w-xl text-pretty leading-relaxed text-muted-foreground">
+            Seats are capped and reviewed personally. The final list locks 24 hours before.
+          </p>
+          <ApplyButton className="mt-1 rounded-full gold-fill px-8 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
             Request Access
           </ApplyButton>
         </div>
