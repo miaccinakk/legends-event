@@ -45,7 +45,7 @@ export function Hero() {
             </p>
 
             {/* Event date + city times */}
-            <div className="mt-7 flex flex-col gap-4 sm:mt-9">
+            <div className="mt-16 flex flex-col gap-4 sm:mt-9">
               <div className="inline-flex items-center gap-3">
                 <CalendarDays className="h-7 w-7 shrink-0 text-primary sm:h-9 sm:w-9" />
                 <span className="text-2xl font-bold tracking-tight sm:text-4xl">Tuesday, 25 August</span>
@@ -76,7 +76,7 @@ export function Hero() {
           </div>
 
           {/* Right — speaker portrait. On mobile it sits behind the text block, faded and masked so copy stays readable. On desktop it becomes a prominent side portrait. */}
-          <div className="pointer-events-none absolute -inset-x-6 -inset-y-32 z-0 opacity-[0.45] [mask-image:linear-gradient(to_bottom,transparent,#000_20%,#000_75%,transparent)] lg:pointer-events-auto lg:relative lg:inset-auto lg:opacity-100 lg:min-h-[560px] lg:[mask-image:none]">
+          <div className="pointer-events-none absolute inset-0 z-0 opacity-[0.45] [mask-image:linear-gradient(to_bottom,transparent,#000_20%,#000_75%,transparent)] lg:pointer-events-auto lg:relative lg:inset-auto lg:opacity-100 lg:min-h-[560px] lg:[mask-image:none]">
             <img
               src="/images/julius-bachmann.png"
               alt="Julius Bachmann — VC, CFO, Founder and musician"
