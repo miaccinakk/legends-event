@@ -3,7 +3,6 @@
 @theme inline {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
-  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -18,8 +17,6 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-dark: var(--dark);
-  --color-dark-foreground: var(--dark-foreground);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -30,7 +27,6 @@
 :root {
   --radius: 0.75rem;
 
-  /* warm, slightly greenish off-white */
   --background: oklch(0.985 0.008 130);
   --foreground: oklch(0.24 0.02 150);
 
@@ -44,17 +40,11 @@
   --input: oklch(0.91 0.012 130);
   --ring: oklch(0.52 0.09 150);
 
-  /* medium, muted green primary */
   --primary: oklch(0.52 0.09 150);
   --primary-foreground: oklch(0.99 0.01 130);
 
-  /* soft yellow / gold accent */
   --accent: oklch(0.82 0.13 92);
   --accent-foreground: oklch(0.28 0.04 100);
-
-  /* dark elements — deep green-tinted */
-  --dark: oklch(0.26 0.03 150);
-  --dark-foreground: oklch(0.98 0.01 130);
 }
 
 * {
@@ -71,141 +61,4 @@ body {
   font-size: 15px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-}
-
-/* ===== Form controls: consistent, legible defaults everywhere ===== */
-@layer base {
-  input,
-  textarea,
-  select {
-    font-size: 15px;
-  }
-
-  /* Native selects get a custom chevron so they no longer look "unstyled" */
-  select {
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2352706a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
-    background-size: 1.1rem;
-    padding-right: 2.5rem;
-    cursor: pointer;
-  }
-}
-
-/* ===== Reusable button styles for consistent, visible actions ===== */
-@layer components {
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    border-radius: var(--radius-md);
-    padding: 0.625rem 1.125rem;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    line-height: 1.25rem;
-    transition:
-      background-color 0.15s ease,
-      border-color 0.15s ease,
-      opacity 0.15s ease;
-    cursor: pointer;
-  }
-  .btn:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
-  .btn-primary {
-    background-color: var(--primary);
-    color: var(--primary-foreground);
-  }
-  .btn-primary:hover:not(:disabled) {
-    opacity: 0.9;
-  }
-  .btn-secondary {
-    border: 1px solid var(--border);
-    background-color: var(--card);
-    color: var(--foreground);
-  }
-  .btn-secondary:hover:not(:disabled) {
-    border-color: color-mix(in srgb, var(--primary) 40%, transparent);
-    background-color: var(--muted);
-  }
-  .btn-sm {
-    padding: 0.4375rem 0.875rem;
-    font-size: 0.875rem;
-  }
-}
-
-/* ===== Application document (print-optimized) ===== */
-.app-doc {
-  /* clean, minimal Luma-style palette, isolated from the app's purple brand */
-  --paper: #ffffff;
-  --ink: #18181b;
-  --ink-soft: #52525b;
-  --muted: #a1a1aa;
-  --hairline: #ececeb;
-  --accent: #b47e2b;
-  --accent-soft: #f7f1e4;
-  color: var(--ink);
-  background-color: #f4f4f2;
-}
-
-.doc-sheet {
-  width: 100%;
-  max-width: 820px;
-  margin: 0 auto;
-  background-color: var(--paper);
-  color: var(--ink);
-}
-
-.doc-link {
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
-}
-.doc-link:hover {
-  border-bottom-color: var(--accent);
-}
-
-.doc-break-avoid {
-  break-inside: avoid;
-}
-
-@media print {
-  @page {
-    size: A4;
-    margin: 14mm;
-  }
-
-  html,
-  body {
-    background: #ffffff !important;
-  }
-
-  .no-print {
-    display: none !important;
-  }
-
-  .app-doc {
-    background: #ffffff !important;
-  }
-
-  .doc-sheet {
-    max-width: none !important;
-    width: 100% !important;
-    box-shadow: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .doc-page-break {
-    break-before: page;
-  }
-
-  .app-doc {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
 }
