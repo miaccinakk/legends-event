@@ -76,7 +76,7 @@ export function Hero() {
           </div>
 
           {/* Right — speaker portrait. On mobile it sits behind the text block, faded and masked so copy stays readable. On desktop it becomes a prominent side portrait. */}
-          <div className="pointer-events-none absolute inset-0 z-0 opacity-[0.45] [mask-image:linear-gradient(to_bottom,transparent,#000_20%,#000_75%,transparent)] lg:pointer-events-auto lg:relative lg:inset-auto lg:opacity-100 lg:min-h-[560px] lg:[mask-image:none]">
+          <div className="pointer-events-none absolute inset-y-0 -inset-x-6 z-0 opacity-[0.45] [mask-image:linear-gradient(to_bottom,transparent,#000_20%,#000_75%,transparent)] lg:pointer-events-auto lg:relative lg:inset-auto lg:opacity-100 lg:min-h-[560px] lg:[mask-image:none]">
             <img
               src="/images/julius-bachmann.png"
               alt="Julius Bachmann — VC, CFO, Founder and musician"
